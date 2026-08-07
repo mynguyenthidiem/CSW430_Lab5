@@ -7,8 +7,8 @@ import axios from 'axios';
 import Styles from '../styles/Styles';
 
 export default function LoginScreen({ navigation }) {
-  const [phone, setPhone] = useState('');
-  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('0373007856');
+  const [password, setPassword] = useState('123');
 
   const handleLogin = () => {
     const loginData = {
@@ -26,7 +26,7 @@ export default function LoginScreen({ navigation }) {
         await AsyncStorage.setItem('TOKEN', token);
         await AsyncStorage.setItem('NAME', name);
 
-        navigation.replace('Home');
+        navigation.replace('MainTabs');
       })
       .catch((error) => {
         alert('Login failed');

@@ -69,6 +69,7 @@ const Styles = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
     fontWeight: 'bold',
+    paddingVertical: 15,
   },
 
   // home
@@ -147,7 +148,7 @@ const Styles = StyleSheet.create({
     marginTop: 20,
     width: '100%',
   },
-  
+
   detailContainer: {
     paddingHorizontal: 10,
     paddingVertical: 10,
@@ -157,8 +158,155 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingRight: 5,
   },
-  detail:{
+  detail: {
     flexDirection: 'row',
+  },
+
+  // customer list
+  customerListContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    borderWidth: 1,
+    marginTop: 20,
+    marginHorizontal: 10,
+    borderColor: '#bebebe',
+    borderRadius: 15,
+  },
+  customerListTitle: {
+    marginBottom: 5,
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#7a7a7a',
+  },
+  customerListText: {
+    fontSize: 16,
+    color: '#000',
+    marginLeft: 20,
+    paddingLeft: 20,
+  },
+  customerListIcon: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingRight: 10,
+  },
+  addCustomerButton: {
+    bottom: 20,
+    right: 20,
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: AppTheme.colors.primary,
+  },
+  buttonAddCusText: {
+    fontSize: 30,
+    color: '#fff',
+  },
+  // transaction list
+  transactionListContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+
+    borderWidth: 1,
+    borderColor: '#bebebe',
+    borderRadius: 15,
+    padding: 10,
+    marginTop: 10,
+    marginHorizontal: 10,
+  },
+  transactionListDetail: {
+    flex: 1,
+  },
+  transactionListSubsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  transactionListSubText: {
+    fontSize: 14,
+    color: '#000',
+    paddingRight: 10,
+    fontWeight: 'bold',
+  },
+  transactionListText: {
+    fontSize: 14,
+    color: '#000',
+    paddingRight: 10,
+  },
+
+  transactionListPriceContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  transactionListPrice: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: AppTheme.colors.primary,
+  },
+  generalContainer: {
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    margin: 10,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+
+  },
+  detailTransactionHeader: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: AppTheme.colors.primary,
+    marginBottom: 10,
+  },
+  detail: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    marginBottom: 10,
+  },
+  detailTransText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#7a7a7a',
+  },
+  detailServiceItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  serviceText: {
+    fontSize: 16,
+  },
+  serviceQuantityText: {
+    fontSize: 16,
+    color: '#7a7a7a',
+    fontWeight: 'bold',
+  },
+  detailServiceLine: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: '#ccc',
+    paddingTop: 10,
+  }, 
+  signOutButton:{
+    width: '98%',
+    height: 50,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: AppTheme.colors.primary,
+    borderRadius: 5,
+    marginTop: 20,
+  },
+  signOutText:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
   },
 });
 

@@ -6,7 +6,6 @@ import { useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 
-
 import Styles, { AppTheme } from '../styles/Styles';
 
 export default function HomeScreen({ navigation }) {
@@ -25,11 +24,11 @@ export default function HomeScreen({ navigation }) {
   }, []);
 
   const fetchServices = () => {
-    axios
-      .get('https://kami-backend-5rs0.onrender.com/services')
-      .then((response) => {
-        setServices(response.data);
-      })
+    axios.get(
+      'https://kami-backend-5rs0.onrender.com/services'
+    ).then((response) => {
+      setServices(response.data);
+    })
       .catch((error) => {
         console.log('Error fetching services:', error);
       });
@@ -72,10 +71,6 @@ export default function HomeScreen({ navigation }) {
       </View>
 
       <View style={Styles.homeContainer}>
-        <View style={Styles.homeImg}>
-          <Image source={require('../assets/logo.png')} />
-        </View>
-
         <View style={Styles.sectionHeader}>
           <Text style={Styles.serviceTitle}>Danh sách dịch vụ</Text>
 
