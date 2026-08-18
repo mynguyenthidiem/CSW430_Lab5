@@ -11,9 +11,10 @@ import CustomerScreen from '../screens/CustomerScreen';
 import SettingScreen from '../screens/SettingScreen';
 import TransactionDetail from '../screens/TransactionDetail';
 import AddCustomerScreen from '../screens/AddCustomerScreen';
-
+import CustomerDetail from '../screens/CustomerDetail';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
+import EditCustomer from '../screens/EditCustomer';
+import AddTransaction from '../screens/AddTransaction';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -75,6 +76,9 @@ export default function AppNavigation() {
         <Stack.Screen name="Edit" component={EditScreen} />
         <Stack.Screen name="TransactionDetail" component={TransactionDetail} />
         <Stack.Screen name="AddCustomer" component={AddCustomerScreen} />
+        <Stack.Screen name="CustomerDetail" component={CustomerDetail} />
+        <Stack.Screen name="EditCustomer" component={EditCustomer} />
+        <Stack.Screen name="AddTransaction" component={AddTransaction} />
       </Stack.Navigator>
     </NavigationContainer>
   );

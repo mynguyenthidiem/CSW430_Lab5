@@ -25,6 +25,44 @@ export default function TransactionDetail({ route, navigation }) {
     }, [id]);
 
 
+    const handleCancel = () => {
+        setVisible(false);
+
+        Alert.alert(
+            'Warning',
+            'Are you sure you want to cancel this transaction? This will affect the customer transaction information.',
+            [{
+
+                text: 'Yes',
+                style: 'yes',
+                onPress: async () => {
+                    try {
+                        const token = await AsyncStorage.getItem('TOKEN');
+
+                        await axios.delete(
+                            `https://kami-backend-5rs0.onrender.com/transactions/${transaction._id}`,
+                            {
+                                headers: {
+                                    Authorization: `Bearer ${token}`,
+                                },
+                            }
+                        );
+
+                        alert('Transaction deleted successfully.');
+                        navigation.goBack();
+                    } catch (error) {
+                        console.log(error.response?.data || error);
+                        alert('Failed to delete transaction.');
+                    }
+                },
+            },
+            {
+                text: 'Cancel',
+                style: 'Cancel',
+            },
+            ]
+        );
+    };
 
     const formatDate = (dateString) => {
         if (!dateString) return '';
@@ -51,6 +89,21 @@ export default function TransactionDetail({ route, navigation }) {
                             onPress={() => setVisible(true)}
                         />
                     }>
+                    <Menu.Item
+                        onPress={() => { }}
+                        title="See More Details"
+                        titleStyle={{
+                            color: '#EF506B',
+                        }}
+                    />
+
+                    <Menu.Item
+                        onPress={handleCancel}
+                        title="Cancel Transaction"
+                        titleStyle={{
+                            color: '#EF506B',
+                        }} S
+                    />
                 </Menu>
             </Appbar.Header>
 

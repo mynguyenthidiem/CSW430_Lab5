@@ -34,6 +34,7 @@ export default function TransactionScreen({ navigation }) {
                         name={item.customer.name}
                         status={item.status}
                         price={item.price}
+                        showCustomerName={true}
                         onPress={() =>
                             navigation.navigate('TransactionDetail', {
                                 id: item._id,
@@ -44,7 +45,7 @@ export default function TransactionScreen({ navigation }) {
             />
             <TouchableOpacity
                 style={Styles.addCustomerButton}
-                onPress={() => { }}
+                onPress={() => {navigation.navigate('AddTransaction')}}
             >
                 <Text style={Styles.buttonAddCusText}>+</Text>
             </TouchableOpacity>

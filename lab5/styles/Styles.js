@@ -236,7 +236,11 @@ const Styles = StyleSheet.create({
     color: '#000',
     paddingRight: 10,
   },
-
+  transactionListCancelText: {
+    fontSize: 14,
+    color: 'red',
+    fontWeight: 'bold',
+  },
   transactionListPriceContainer: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -292,8 +296,8 @@ const Styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: '#ccc',
     paddingTop: 10,
-  }, 
-  signOutButton:{
+  },
+  signOutButton: {
     width: '98%',
     height: 50,
     alignSelf: 'center',
@@ -303,10 +307,140 @@ const Styles = StyleSheet.create({
     borderRadius: 5,
     marginTop: 20,
   },
-  signOutText:{
+  signOutText: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#fff',
+  },
+
+  customerDetail: {
+    flexDirection: 'row',
+  },
+  customerDetailText: {
+    frontSize: 18,
+  },
+  addTransactionInput: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    borderShadowColor: '#000',
+    paddingHorizontal: 10,
+    fontSize: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  serviceListContainer: {
+    width: '100%',
+    paddingVertical: 5,
+  },
+
+  serviceItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 10,
+  },
+
+  serviceCircle: {
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    borderWidth: 1,
+    borderColor: '#FFB88F',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+  },
+
+  serviceCircleSelected: {
+    borderColor: '#FFB88F',
+    backgroundColor: '#EFB88F',
+  },
+
+  serviceName: {
+    fontSize: 14,
+    color: '#777',
+  },
+
+  serviceDetail: {
+    marginLeft: 28,
+    marginBottom: 10,
+  },
+
+  serviceActionRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
+  quantityContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  quantityButton: {
+    width: 30,
+    height: 28,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  quantityButtonText: {
+    fontSize: 16,
+    color: '#555',
+  },
+
+  quantityNumber: {
+    width: 32,
+    height: 28,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: '#ddd',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  quantityText: {
+    fontSize: 13,
+    color: '#333',
+  },
+
+  executorButton: {
+    width: 145,
+    height: 32,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    justifyContent: 'center',
+  },
+
+  executorContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
+  executorText: {
+    color: '#777',
+    fontSize: 13,
+  },
+
+  executorSelectedText: {
+    color: '#333',
+  },
+
+  servicePrice: {
+    marginTop: 5,
+    fontSize: 12,
+    color: '#333',
+  },
+
+  servicePriceValue: {
+    color: '#EF506B',
+    fontWeight: 'bold',
   },
 });
 
